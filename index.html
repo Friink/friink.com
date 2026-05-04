@@ -1,8 +1,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friink - A place for humans.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Friink — community &amp; mental health services</title>
+	<meta name="description" content="Friink combines a social community with a mental health service marketplace: connect with others, find verified professionals, and book care in one place.">
 
 	<link rel="icon" href="favicon.png" type="image/png">
 
@@ -13,33 +14,99 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
 		<div class="defAlignment">
 			<a href="#">
-				<img src="assets/brand/logo.svg" alt="Friink Logo" class="headerLogo">
+				<img src="assets/brand/logoWhite.svg" alt="Friink Logo" class="headerLogo">
 			</a>
 
 			<a href="#" class="defCTA primaryCTA downloadCTA">Download</a>
 		</div>
 	</header>
 	<main>
-		<div class="defAlignment">
-			<div class="cover">
+		<div class="cover">
+			<div class="defAlignment">
 				<img src="assets/brand/logoWhite.svg" alt="" class="logoCover">
 				<br>
-				<img src="assets/brand/logoTextWhite.svg" alt="">
+				<img src="assets/brand/logoTextWhite.svg" alt="" class="logoFullCover">
 				<br>
-				
-				<h2>A place for humans.</h2>
+				<p class="nunito headlineCover">A place for humans.</p>
+				<p class="coverSubline">A calmer social space where you can follow real people—and book sessions with verified mental health professionals when you are ready.</p>
 			</div>
 		</div>
+
+		<section class="social" aria-labelledby="social-heading">
+			<div class="defAlignment socialInner">
+				<h2 id="social-heading" class="nunito socialHeadline">Microblogging, minus the chaos</h2>
+				<p class="socialLead">Short posts, real follows, and a feed that stays readable—built for mental health community, not endless hot takes.</p>
+
+				<div class="featureGrid">
+					<article class="featureCard">
+						<h3 class="nunito featureTitle">Quote, star, share</h3>
+						<p class="featureBody">Quote posts, save what matters, share to chat—or out to the world when you want external links on.</p>
+					</article>
+					<article class="featureCard">
+						<h3 class="nunito featureTitle">Follow requests</h3>
+						<p class="featureBody">Nobody lands in your network without a yes—followers and following stay intentional.</p>
+					</article>
+					<article class="featureCard">
+						<h3 class="nunito featureTitle">Search that actually finds people</h3>
+						<p class="featureBody">Global search for users and posts—by username fragments, names, and phrases in what people wrote.</p>
+					</article>
+					<article class="featureCard">
+						<h3 class="nunito featureTitle">Chat &amp; calls</h3>
+						<p class="featureBody">Text, media, audio or video calls—and room to escalate a voice call to video when both sides agree.</p>
+					</article>
+				</div>
+
+				<p class="sectionCtaKicker nunito">Get launch updates</p>
+				<ul class="socialLinks">
+					<li><a class="socialLink" href="#" rel="noopener noreferrer">Bluesky</a></li>
+					<li><a class="socialLink" href="#" rel="noopener noreferrer">Instagram</a></li>
+					<li><a class="socialLink" href="#" rel="noopener noreferrer">Discord</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="professional" aria-labelledby="professional-heading">
+			<div class="defAlignment professionalInner">
+				<h2 id="professional-heading" class="nunito professionalHeadline">A marketplace for real sessions</h2>
+				<p class="professionalLead">List a service, accept requests, agree on a time, get paid, and meet over video—all with statuses and history you can trust.</p>
+
+				<div class="featureGrid featureGrid--pro">
+					<article class="featureCard featureCard--pro">
+						<h3 class="nunito featureTitle">Requests with clear states</h3>
+						<p class="featureBody">New → Opened → Accepted, rescheduled, or declined—then paid sessions, notes, PDFs, and optional sharing when a case closes.</p>
+					</article>
+					<article class="featureCard featureCard--pro">
+						<h3 class="nunito featureTitle">Payments that trigger the calendar</h3>
+						<p class="featureBody">Payment links hit email, chat, and notifications; once you pay, an event lands on both calendars.</p>
+					</article>
+					<article class="featureCard featureCard--pro">
+						<h3 class="nunito featureTitle">Feedback after care</h3>
+						<p class="featureBody">Subscribers rate and comment when a request closes—reputation professionals can stand behind.</p>
+					</article>
+					<article class="featureCard featureCard--pro">
+						<h3 class="nunito featureTitle">Verified providers only</h3>
+						<p class="featureBody">Legal name, intro for reviewers, documents, and a human decision before the badge goes on.</p>
+					</article>
+				</div>
+
+				<p class="sectionCtaKicker sectionCtaKicker--pro nunito">Professionals &amp; press</p>
+				<ul class="professionalLinks">
+					<li><a class="professionalLink" href="mailto:hello@friink.com?subject=Friink%20professional%20interest">Professional interest</a></li>
+					<li><a class="professionalLink" href="#" rel="noopener noreferrer">Press kit</a></li>
+					<li><a class="professionalLink" href="mailto:hello@friink.com">Contact</a></li>
+				</ul>
+			</div>
+		</section>
 	</main>
 	<footer>
 		<div class="defAlignment">
-			<p>&copy 2026 Friink.</p>
+			<p class="copyright">&copy 2026 Friink.</p>
 		</div>
 	</footer>
 </body>
