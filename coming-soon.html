@@ -15,11 +15,16 @@
 	<style>
 		:root {
 			--brand: #006655;
+			--primary-container: #2dd4bf;
 			--background: #faf8ff;
 			--surface: #faf8ff;
+			--surface-container: #eaedff;
 			--surface-container-low: #f2f3ff;
+			--surface-container-high: #e2e7ff;
+			--surface-container-highest: #dae2fd;
 			--on-surface: #131b2e;
 			--on-surface-variant: #3c4a46;
+			--outline: #6b7a76;
 			--on-primary: #ffffff;
 			--outline-variant: #bec9c4;
 		}
@@ -27,11 +32,16 @@
 		@media (prefers-color-scheme: dark) {
 			:root {
 				--brand: #75d7c0;
+				--primary-container: #006655;
 				--background: #101816;
 				--surface: #18211f;
+				--surface-container: #1d2a27;
 				--surface-container-low: #141d1b;
+				--surface-container-high: #263530;
+				--surface-container-highest: #30413b;
 				--on-surface: #e7f1ed;
 				--on-surface-variant: #b8c9c3;
+				--outline: #8ea69d;
 				--on-primary: #00201c;
 				--outline-variant: #52655e;
 			}
@@ -52,24 +62,37 @@
 					colors: {
 						"primary": "var(--brand)",
 						"on-primary": "var(--on-primary)",
+						"outline": "var(--outline)",
 						"outline-variant": "var(--outline-variant)",
 						"background": "var(--background)",
 						"surface": "var(--surface)",
+						"surface-container": "var(--surface-container)",
 						"surface-container-low": "var(--surface-container-low)",
 						"on-surface": "var(--on-surface)",
 						"on-surface-variant": "var(--on-surface-variant)"
 					},
+					borderRadius: {
+						"DEFAULT": "0.25rem",
+						"lg": "0.5rem",
+						"xl": "0.75rem",
+						"3xl": "1.5rem",
+						"full": "9999px"
+					},
 					spacing: {
 						"container-padding-mobile": "20px",
 						"container-padding-desktop": "40px",
-						"gutter": "24px"
+						"base": "8px",
+						"gutter": "24px",
+						"section-gap": "80px"
 					},
 					fontFamily: {
 						"body-md": ["Nunito Sans"],
+						"headline-md": ["Nunito Sans"],
 						"label-md": ["Nunito Sans"]
 					},
 					fontSize: {
 						"body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+						"headline-md": ["24px", { lineHeight: "32px", fontWeight: "700" }],
 						"label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }]
 					}
 				}
@@ -81,12 +104,13 @@
 
 <body class="min-h-screen bg-background text-on-surface font-body-md antialiased flex flex-col">
 	<friink-header></friink-header>
-	<main class="flex flex-1 items-center justify-center px-container-padding-mobile md:px-container-padding-desktop py-24 text-center">
+	<main class="flex flex-1 flex-col items-center justify-center px-container-padding-mobile md:px-container-padding-desktop py-24 text-center">
 		<section class="max-w-xl">
 			<img src="assets/brand/logo065.svg" alt="Friink" class="h-24 w-auto mx-auto mb-8">
 			<h1 class="text-4xl md:text-5xl font-bold mb-4">Coming soon.</h1>
 			<p class="text-lg text-on-surface-variant">Friink is a calmer social space for humans. We are working on it now.</p>
 		</section>
+		<friink-waitlist></friink-waitlist>
 	</main>
 	<friink-footer></friink-footer>
 </body>
