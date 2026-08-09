@@ -1,0 +1,209 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Friink - A place for humans.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#d8e5e2",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-container-low": "#f2f3ff",
+                        "secondary-fixed-dim": "#c0c1ff",
+                        "on-secondary-container": "#fffbff",
+                        "on-secondary-fixed": "#07006c",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00201c",
+                        "primary": "#006b5f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e1e0ff",
+                        "surface-dim": "#d2d9f4",
+                        "on-background": "#131b2e",
+                        "inverse-primary": "#3cddc7",
+                        "secondary": "#4648d4",
+                        "on-surface-variant": "#3c4a46",
+                        "background": "#faf8ff",
+                        "tertiary-container": "#b4c1be",
+                        "surface-container": "#eaedff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-surface": "#131b2e",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#6b7a76",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#6063ee",
+                        "surface-tint": "#006b5f",
+                        "outline-variant": "#bacac5",
+                        "on-primary-container": "#00574d",
+                        "on-tertiary-fixed": "#121e1c",
+                        "on-tertiary-fixed-variant": "#3d4947",
+                        "primary-container": "#2dd4bf",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#005047",
+                        "tertiary-fixed-dim": "#bcc9c6",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#434f4d",
+                        "on-secondary-fixed-variant": "#2f2ebe",
+                        "surface-container-highest": "#dae2fd",
+                        "surface-variant": "#dae2fd",
+                        "tertiary": "#55615f",
+                        "inverse-surface": "#283044",
+                        "surface": "#faf8ff",
+                        "primary-fixed-dim": "#3cddc7",
+                        "primary-fixed": "#62fae3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-mobile": "20px",
+                        "container-padding-desktop": "40px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Nunito Sans"],
+                        "body-lg": ["Nunito Sans"],
+                        "headline-lg-mobile": ["Nunito Sans"],
+                        "label-sm": ["Nunito Sans"],
+                        "label-md": ["Nunito Sans"],
+                        "headline-md": ["Nunito Sans"],
+                        "display-lg": ["Nunito Sans"],
+                        "headline-lg": ["Nunito Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gradient-text {
+            background: linear-gradient(135deg, #2dd4bf 0%, #006b5f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #2dd4bf 0%, #006b5f 100%);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 107, 95, 0.2);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 107, 95, 0.05);
+        }
+        .progress-shimmer {
+            background: linear-gradient(90deg, #006b5f 0%, #2dd4bf 50%, #006b5f 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop h-20 max-w-7xl mx-auto bg-surface/60 backdrop-blur-xl shadow-sm">
+<div class="text-headline-md font-headline-md font-black tracking-tight text-primary">Friink</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md transition-colors hover:bg-primary/90">Early Access</button>
+</header>
+<main class="pt-24 pb-section-gap">
+<!-- Hero Section -->
+<section class="min-h-[70vh] flex flex-col items-center justify-center text-center px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto relative mt-section-gap">
+<div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none rounded-3xl" data-alt="A highly abstract, fluid art composition featuring soft, sweeping waves of mint green, hydra blue, and pure white. The aesthetic is 'Kinetic Calm', with a bright, airy, light-mode feel. The colors blend seamlessly, creating a sense of energized focus and modern organic wellness. Soft, diffused lighting enhances the gentle curves and translucent layers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdyncSsbz91iIygfhLma7Cm8NT68-FdR4ioYA3kRMCZ7WRt4Sjho1M2UDSYwDaKUxQJcblX_EwJOcbBu3F-S9vU_W3ahfvzwhVsAp8moGavUt9yrSBUrng5nCbUNUMzOSc4lR13kPgv5yXB2a628UdoIW9aJzPUHJBDhIslGVNhwv2mHiywGNLvGllA66Kw0kTkJlOw2o6GMTEpd97Zuh5iIqzsplHragmhcY3p7fE-fSBCzWCO2fKOA')"></div>
+<div class="glass-card p-12 rounded-3xl max-w-3xl w-full flex flex-col items-center gap-8 relative z-10 border-t-2 border-primary-container">
+<h1 class="text-display-lg font-display-lg text-on-surface">A place for humans.</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl">
+                    A calmer social space unlike anything you have seen so far.
+                </p>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md flex items-center gap-2 group transition-colors hover:bg-primary/90"><span class="">Visit Beta Build</span><span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span></button>
+</div>
+</section>
+<!-- Progress Section -->
+<section class="px-container-padding-mobile md:px-container-padding-desktop max-w-4xl mx-auto mt-section-gap">
+<div class="bg-surface rounded-xl p-8 shadow-[0_4px_24px_rgba(0,107,95,0.1)] border-t-2 border-outline-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface">Under Development</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">Laying the foundation for a better space.</p>
+</div>
+<span class="text-headline-lg font-headline-lg text-primary">10%</span>
+</div>
+<div class="h-4 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full progress-shimmer rounded-full" style="width: 10%"></div>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section class="px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1 rounded-3xl overflow-hidden h-[400px] shadow-[0_8px_32px_rgba(0,107,95,0.1)] relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A vibrant, abstract 3D render representing clarity emerging from chaos. The composition features a complex, noisy background of muted greys and dark blues that gradually transitions into a clear, bright, geometric center glowing with mint green and hydra blue light. The lighting is soft but directed, highlighting the smooth, organic shapes of the clear center against the rougher textures of the periphery. Modern organic style, high aesthetic quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyEM2IXXvI8NMjV2vJTOyNGp6nUY2vTEOY9FCaEnbwouV39Biq9fvzrcNWJCFVEpiAnUD_lg1yHrUFnRTCLsASfO-OcQIdIrhA5x3vgF5nPPmcNhX86ozejSCqeh1XeUdXnY08xUDaCbzW3jVx-1yCqP9mhl0_YZRb3QjHYhfa2ljdhW4n-cgDuOLRFIIpLcqjauZDk68cvQyfG1lRWA1DN9eCL8K5RYiDEfeWZlADJqOiFRhroXvbRQ')"></div>
+</div>
+<div class="order-1 md:order-2 flex flex-col gap-6 pl-0 md:pl-8">
+<span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-on-primary-container rounded-full text-label-sm font-label-sm w-fit">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+                        Our Vision
+                    </span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface md:text-display-lg md:font-display-lg leading-tight">
+                        Designing for clarity, not engagement.
+                    </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                        Modern social spaces are noisy, overwhelming, and built to keep you scrolling. We are building Friink with a different philosophy: Kinetic Calm. It's a space designed to support your active life, offering a refreshing digital environment that respects your attention and energy.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Waitlist Section -->
+<section class="px-container-padding-mobile md:px-container-padding-desktop max-w-3xl mx-auto mt-section-gap text-center">
+<div class="bg-surface-container rounded-3xl p-12 shadow-sm border border-surface-container-high">
+<span class="material-symbols-outlined text-display-lg text-primary mb-6" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-4">Be part of the beginning.</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8 max-w-md mx-auto">
+                    Join the waitlist to get early access when we open the doors.
+                </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-1 bg-surface border-b-2 border-outline bg-transparent px-4 py-3 text-body-md focus:outline-none focus:border-primary focus:ring-0 transition-colors rounded-t-md" placeholder="Your email address" required="" type="email">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md whitespace-nowrap transition-colors hover:bg-primary/90" type="submit">Join Waitlist</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-gutter px-container-padding-mobile md:px-container-padding-desktop flex flex-col md:flex-row justify-between items-center gap-base bg-surface-container-low">
+<div class="text-headline-md font-headline-md font-black text-primary">Friink</div>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            © 2026 Friink. Built for humans.
+        </p>
+</footer>
+
+
+</body></html>
