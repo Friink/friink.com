@@ -9,7 +9,37 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&amp;display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 	<style>
-		:root { --brand: #006655; }
+		:root {
+			--brand: #006655;
+			--background: #faf8ff;
+			--surface: #faf8ff;
+			--surface-container-low: #f2f3ff;
+			--on-surface: #131b2e;
+			--on-surface-variant: #3c4a46;
+			--on-primary: #ffffff;
+			--outline-variant: #bec9c4;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--brand: #75d7c0;
+				--background: #101816;
+				--surface: #18211f;
+				--surface-container-low: #141d1b;
+				--on-surface: #e7f1ed;
+				--on-surface-variant: #b8c9c3;
+				--on-primary: #00201c;
+				--outline-variant: #52655e;
+			}
+
+			.footer-logo {
+				filter: invert(1) brightness(1.8);
+			}
+
+			.header-logo {
+				filter: invert(1) brightness(1.8);
+			}
+		}
 	</style>
 	<script>
 		tailwind.config = {
@@ -17,12 +47,13 @@
 				extend: {
 					colors: {
 						"primary": "var(--brand)",
-						"on-primary": "#ffffff",
-						"background": "#faf8ff",
-						"surface": "#faf8ff",
-						"surface-container-low": "#f2f3ff",
-						"on-surface": "#131b2e",
-						"on-surface-variant": "#3c4a46"
+						"on-primary": "var(--on-primary)",
+						"outline-variant": "var(--outline-variant)",
+						"background": "var(--background)",
+						"surface": "var(--surface)",
+						"surface-container-low": "var(--surface-container-low)",
+						"on-surface": "var(--on-surface)",
+						"on-surface-variant": "var(--on-surface-variant)"
 					},
 					spacing: {
 						"container-padding-mobile": "20px",

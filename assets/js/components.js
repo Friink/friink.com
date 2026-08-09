@@ -2,8 +2,11 @@ class FriinkHeader extends HTMLElement {
 	connectedCallback() {
 		this.style.display = 'contents';
 		this.innerHTML = `
-			<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop h-20 bg-surface/60 backdrop-blur-xl shadow-sm">
-				<img src="assets/brand/logoText065.svg" alt="Friink" class="h-10 w-auto">
+			<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop h-20 bg-surface/60 backdrop-blur-xl shadow-sm border-b border-outline-variant">
+				<picture>
+					<source media="(prefers-color-scheme: dark)" srcset="assets/brand/logoTextBlack.svg">
+					<img src="assets/brand/logoText065.svg" alt="Friink" class="header-logo h-10 w-auto">
+				</picture>
 				<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md transition-colors hover:bg-primary/90" href="coming-soon.html">Early Access</a>
 			</header>`;
 	}
@@ -35,7 +38,7 @@ class FriinkWaitlist extends HTMLElement {
 		this.style.display = 'contents';
 		this.innerHTML = `
 			<section class="px-container-padding-mobile md:px-container-padding-desktop max-w-3xl mx-auto mt-section-gap text-center" aria-labelledby="waitlist-heading">
-				<div class="bg-surface-container rounded-3xl p-12 shadow-sm border border-surface-container-high">
+				<div class="bg-surface-container rounded-3xl p-12 shadow-sm border border-outline-variant">
 					<span class="material-symbols-outlined text-display-lg text-primary mb-6" style="font-variation-settings: 'FILL' 1;">water_drop</span>
 					<h2 id="waitlist-heading" class="text-headline-md font-headline-md text-on-surface mb-4">Be part of the beginning.</h2>
 					<p class="text-body-md font-body-md text-on-surface-variant mb-8 max-w-md mx-auto">Join the waitlist to get early access when we open the doors.</p>
@@ -53,8 +56,8 @@ class FriinkFooter extends HTMLElement {
 	connectedCallback() {
 		this.style.display = 'contents';
 		this.innerHTML = `
-			<footer class="w-full py-gutter px-container-padding-mobile md:px-container-padding-desktop flex flex-col md:flex-row justify-between items-center gap-base bg-surface-container-low">
-				<img src="assets/brand/logoTextBlack.svg" alt="Friink" class="h-10 w-auto">
+			<footer class="w-full py-gutter px-container-padding-mobile md:px-container-padding-desktop flex flex-col md:flex-row justify-between items-center gap-base bg-surface-container-low border-t border-outline-variant">
+				<img src="assets/brand/logoTextBlack.svg" alt="Friink" class="footer-logo h-10 w-auto">
 				<p class="text-body-md font-body-md text-on-surface-variant">&copy; 2026 Friink. Built for humans.</p>
 			</footer>`;
 	}
