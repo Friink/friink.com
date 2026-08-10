@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="theme-color" content="#faf8ff" media="(prefers-color-scheme: light)">
-	<meta name="theme-color" content="#101816" media="(prefers-color-scheme: dark)">
+	<meta name="theme-color" content="#006655" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#75d7c0" media="(prefers-color-scheme: dark)">
 	<link rel="icon" type="image/png" href="favicon.png">
 	<link rel="shortcut icon" href="favicon.png">
 	<title>Friink - Coming soon.</title>
@@ -64,7 +64,10 @@
 	<friink-header></friink-header>
 	<main class="flex flex-1 flex-col items-center justify-center px-container-padding-mobile md:px-container-padding-desktop py-24 text-center">
 		<section class="max-w-xl">
-			<img src="assets/brand/logo065.svg" alt="Friink" class="h-24 w-auto mx-auto mb-8">
+			<picture>
+				<source media="(prefers-color-scheme: dark)" srcset="assets/brand/logoWhite.svg">
+				<img src="assets/brand/logo065.svg" alt="Friink" class="h-24 w-auto mx-auto mb-8">
+			</picture>
 			<h1 class="text-4xl md:text-5xl font-bold mb-4">Coming soon.</h1>
 			<p class="text-lg text-on-surface-variant">Friink - A place for humans.</p>
 		</section>
