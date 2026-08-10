@@ -16,47 +16,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
 		rel="stylesheet">
-	<style>
-		:root {
-			--brand: #006655;
-			--primary-container: #2dd4bf;
-			--background: #faf8ff;
-			--surface: #faf8ff;
-			--surface-container: #eaedff;
-			--surface-container-low: #f2f3ff;
-			--surface-container-high: #e2e7ff;
-			--surface-container-highest: #dae2fd;
-			--on-surface: #131b2e;
-			--on-surface-variant: #3c4a46;
-			--outline: #6b7a76;
-			--outline-variant: #bec9c4;
-			--on-primary-container: #005044;
-			--on-primary: #ffffff;
-			--glass: rgba(255, 255, 255, 0.7);
-			--glass-border: rgba(255, 255, 255, 0.3);
-		}
-
-		@media (prefers-color-scheme: dark) {
-			:root {
-				--brand: #75d7c0;
-				--primary-container: #006655;
-				--background: #101816;
-				--surface: #18211f;
-				--surface-container: #1d2a27;
-				--surface-container-low: #141d1b;
-				--surface-container-high: #263530;
-				--surface-container-highest: #30413b;
-				--on-surface: #e7f1ed;
-				--on-surface-variant: #b8c9c3;
-				--outline: #8ea69d;
-				--outline-variant: #52655e;
-				--on-primary-container: #a1f2dc;
-				--on-primary: #00201c;
-				--glass: rgba(24, 33, 31, 0.82);
-				--glass-border: rgba(161, 242, 220, 0.18);
-			}
-		}
-	</style>
+	<link rel="stylesheet" href="assets/css/main.css">
 	<script id="tailwind-config">
 		tailwind.config = {
 			darkMode: "class",
@@ -117,77 +77,6 @@
 			}
 		}
 	</script>
-	<style>
-		.gradient-text {
-			background: linear-gradient(135deg, #2dd4bf 0%, var(--brand) 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-clip: text;
-		}
-
-		.btn-gradient {
-			background: linear-gradient(135deg, #2dd4bf 0%, var(--brand) 100%);
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
-		}
-
-		.btn-gradient:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 12px rgba(0, 102, 85, 0.2);
-		}
-
-		.glass-card {
-			background: var(--glass);
-			backdrop-filter: blur(12px);
-			border: 1px solid var(--glass-border);
-			box-shadow: 0 8px 32px rgba(0, 102, 85, 0.05);
-		}
-
-		.progress-shimmer {
-			background: linear-gradient(90deg, var(--brand) 0%, #2dd4bf 50%, var(--brand) 100%);
-			background-size: 200% 100%;
-			animation: shimmer 2s infinite linear;
-		}
-
-		@keyframes shimmer {
-			0% {
-				background-position: 100% 0;
-			}
-
-			100% {
-				background-position: -100% 0;
-			}
-		}
-
-		.hero-background {
-			background-image: url('assets/media/pexels-enginakyurt-6749419.jpg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-		}
-
-		@media (prefers-color-scheme: dark) {
-			.hero-background::after {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background: rgba(5, 15, 13, 0.42);
-			}
-
-			.footer-logo {
-				filter: invert(1) brightness(1.8);
-			}
-
-			.header-logo {
-				filter: invert(1) brightness(1.8);
-			}
-		}
-
-		@media (max-width: 640px) {
-			.hero-background {
-				background-image: url('assets/media/pexels-enginakyurt-6749419-mobile-cropped.jpg');
-			}
-		}
-	</style>
 	<script src="assets/js/components.js" defer></script>
 </head>
 
@@ -196,7 +85,7 @@
 	<friink-header></friink-header>
 	<main class="pt-20 pb-section-gap">
 		<section
-			class="min-h-[70vh] flex flex-col items-center justify-center text-center px-container-padding-mobile md:px-container-padding-desktop py-12 md:py-20 w-full relative">
+			class="min-h-[70vh] flex flex-col items-center justify-center text-center px-container-padding-mobile md:px-container-padding-desktop py-12 md:py-20 w-full relative isolate">
 			<div class="hero-background absolute inset-0 -z-10 overflow-hidden pointer-events-none"
 				data-alt="A soft, organic photograph used as the Friink hero background.">
 			</div>
