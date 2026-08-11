@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Friink - The Intelligent Canvas</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2f3131",
+                        "outline-variant": "#cfc4c5",
+                        "tertiary-fixed": "#e3e2e2",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-secondary-container": "#656464",
+                        "on-surface-variant": "#4c4546",
+                        "surface-tint": "#5e5e5e",
+                        "tertiary-container": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-container": "#848484",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#c6c6c6",
+                        "on-primary-fixed-variant": "#474747",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "outline": "#7e7576",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "tertiary": "#000000",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#000000",
+                        "primary-container": "#1b1b1b",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#1b1b1b",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-error": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e4e2e1",
+                        "primary-fixed": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-container": "#838484"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "section-gap": "160px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<a class="font-headline-lg text-headline-lg tracking-tighter text-primary dark:text-on-primary" href="#">Friink</a>
+<div class="hidden md:flex gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-200 font-label-md text-label-md" href="#">Features</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-200 font-label-md text-label-md" href="#">Showcase</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-200 font-label-md text-label-md" href="#">Pricing</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors duration-200 font-label-md text-label-md" href="#">About</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-primary dark:text-on-primary font-label-md text-label-md hidden md:block" href="#">Log In</a>
+<a class="bg-primary text-on-primary px-6 py-3 rounded font-label-md text-label-md hover:opacity-90 transition-opacity" href="#">Get Started</a>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col items-start gap-8">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg max-w-4xl text-primary leading-tight">
+                The intelligent canvas for infinite creativity
+            </h1>
+<a class="bg-primary text-on-primary px-8 py-4 rounded-lg font-body-md text-body-md hover:bg-inverse-surface transition-colors" href="#">
+                Get started
+            </a>
+</section>
+<!-- Value Prop Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-4">One workspace for your entire product development process.</h2>
+<p class="font-body-lg text-body-lg text-secondary">Made so your whole team can go from WIP to ship, together.</p>
+</div>
+</section>
+<!-- Features Bento -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant rounded-xl flex flex-col justify-end min-h-[400px]">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">design_services</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Design anything you can imagine</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Turn your ideas into apps, websites, and products.</p>
+<a class="font-label-md text-label-md text-primary flex items-center gap-2 group" href="#">
+                        Explore design tools <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-8 border border-outline-variant rounded-xl flex flex-col justify-end min-h-[400px]">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">code</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Build with intention</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Dev tools that take you all the way to production.</p>
+<a class="font-label-md text-label-md text-primary flex items-center gap-2 group" href="#">
+                        Explore build tools <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="mt-section-gap text-center max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-4">Move fast in the right direction on an AI-native canvas.</h2>
+<p class="font-body-lg text-body-lg text-secondary">Teammates and AI agents work in the same space with shared context. Generate new design directions, refine, and align—together.</p>
+</div>
+</section>
+<!-- Testimonial -->
+<section class="bg-surface-container-lowest py-section-gap border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col justify-between">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 leading-snug">
+                        "Everyone is able to influence, inspire, and give input without ever leaving the design file. That creates a really transparent, open, and honest process throughout the whole project."
+                    </h2>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high" data-alt="A portrait photo of a professional designer in a modern, well-lit studio environment, looking confident and creative. High contrast, sharp focus, monochromatic clothing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASP3HLZP6RMEZgALcyZQehM1XJo1ZxcVMC_s7NBrCNYb4FkJVoY7qXpThGwm7RD9w8eCgRaE3w6pvTlg0FUX02h7DJp5XWV3w78HtIRlslC-hoIgmWewCJyMMcaRWER32uNpEK6BSS_bvgokzaAgYH4T6ZbuSBWh7HAFQIa5efHvpbeg61_aLcYQc6HlHUCN8a3gaqDEVv8kYyXFJglbKMHKAA9tAAuDMxGDI1fEnTHzrDHwKOasMkMA')"></div>
+<div>
+<p class="font-label-md text-label-md text-primary">Francisco Ruiz</p>
+<p class="font-label-sm text-label-sm text-secondary">Senior Design Director, Code and Theory</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 border-l border-outline-variant pl-8 flex flex-col justify-center">
+<p class="font-display-lg text-display-lg text-primary mb-2">95%</p>
+<p class="font-body-md text-body-md text-secondary">of the Fortune 500 uses Friink</p>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap text-center flex flex-col items-center">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-8">Ideas no longer have to wait their turn</h2>
+<a class="bg-primary text-on-primary px-12 py-6 rounded-xl font-headline-lg text-headline-lg hover:scale-105 transition-transform" href="#">
+                Get started
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface-container-highest w-full py-section-gap border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div>
+<a class="font-headline-lg text-headline-lg text-primary dark:text-on-primary block mb-4" href="#">Friink</a>
+<p class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim">© 2024 Friink. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-opacity" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-opacity" href="#">Twitter</a>
+<a class="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-opacity" href="#">LinkedIn</a>
+</div>
+<div>
+<img alt="Reference Image" class="w-full opacity-50 grayscale hover:grayscale-0 transition-all rounded" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+</div>
+</footer>
+</body></html>

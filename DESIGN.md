@@ -18,9 +18,9 @@ colors:
   surface-tint: '#0c6b59'
   primary: '#004c3f'
   on-primary: '#ffffff'
-  primary-container: '#006655'
-  on-primary-container: '#90e1cb'
-  inverse-primary: '#86d5c0'
+  primary-container: '#33aa55'
+  on-primary-container: '#ffffff'
+  inverse-primary: '#8ee39c'
   secondary: '#4b635c'
   on-secondary: '#ffffff'
   secondary-container: '#cbe5dc'
@@ -33,10 +33,10 @@ colors:
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#a1f2dc'
-  primary-fixed-dim: '#86d5c0'
-  on-primary-fixed: '#00201a'
-  on-primary-fixed-variant: '#005143'
+  primary-fixed: '#b5f2bc'
+  primary-fixed-dim: '#8ee39c'
+  on-primary-fixed: '#002108'
+  on-primary-fixed-variant: '#0f5b24'
   secondary-fixed: '#cee8df'
   secondary-fixed-dim: '#b2ccc3'
   on-secondary-fixed: '#071f1a'
@@ -109,7 +109,9 @@ The design system embodies a "Kinetic Calm" aesthetic—a sophisticated blend of
 The style leverages **Minimalism** with a touch of **Glassmorphism** for depth. It prioritizes clarity, generous whitespace, and a rhythmic sense of motion. The emotional goal is to feel precise yet breathing, reliable yet visionary. It avoids aggressive "growth-hack" visuals in favor of editorial-grade compositions that respect the user's cognitive load.
 
 ## Colors
-The palette is centered around a deep, sophisticated teal (#006655) which provides an anchor of stability and professional trust. 
+The palette is centered around the fresh green #33aa55, which provides an energetic but grounded anchor for the Friink brand.
+
+The website maps this brand color to the `primary` theme token. Light and dark modes both retain #33aa55 for actions, paired with dark text for accessible contrast.
 
 - **Primary:** Used for key actions and brand presence.
 - **Containers:** Lower-intensity versions of the primary color used for grouping related content or subtle background highlights.
